@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/lukehoggett/bulb-control/issues"
   },
-  "homepage": "https://github.com/lukehoggett/bulb-control#readme"
+  "homepage": "https://github.com/lukehoggett/bulb-control#readme",
+  "dependencies": {
+    "electron": "^1.6.11"
+  }
 }
