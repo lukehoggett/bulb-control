@@ -5,7 +5,6 @@
     "restParams": true
   },
   "plugins": [
-    "angular"
   ],
   "env": {
     "browser": true,
@@ -13,7 +12,6 @@
     "node": true
   },
   "globals": {
-    "angular": true,
     "module": true,
     "tinycolor": true
   },
