@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/lukehoggett/bulb-control#readme",
   "dependencies": {
-    "electron": "^1.6.11"
+    "bunyan": "^1.8.10",
+    "electron": "^1.6.11",
+    "noble": "^1.8.1"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.5.11",
+    "spectron": "^3.7.2"
   }
 }
