@@ -1,7 +1,7 @@
 const noble = require('noble');
 const log = require('./logger');
 
-const CANDLE 
+// const CANDLE 
 
 class BulbNoble {
   constructor() {
@@ -35,35 +35,34 @@ class BulbNoble {
   }
 
   discover() {
-    console.debug('Noble: Discover');
+    log.debug('Noble: Discover');
     noble.on('discover', function(peripheral) {
       log.debug('Found device with local name: ' + peripheral.advertisement.localName);
       log.debug('advertising the following service uuid\'s: ' + peripheral.advertisement.serviceUuids);
-      
+
       // check for playbulb device to see if we should record it's existence
-      
     });
   }
-  
+
   connect(peripheral) {
-    console.debug('Noble: Connect');
+    log.debug('Noble: Connect');
     peripheral.connect(error => {
       if (error) {
         log.error('connect error', error);
       }
       // update peripheral in store
-      console.log('connected to peripheral: ' + peripheral.uuid);
+      log.log('connected to peripheral: ' + peripheral.uuid);
     });
   }
-  
+
   disconnect(peripheral) {
-    peripheral.disconnect(error => {
+    peripheral.disconnect((error) => {
       if (error) {
         log.error('disconnect error', error);
       }
       // update peripeheral in store
-      console.log('disconnected from peripheral: ' + peripheral.uuid);
-    }
+      log.log(`disconnected from peripheral: ${peripheral.uuid}`);
+    });
   }
 }
 
